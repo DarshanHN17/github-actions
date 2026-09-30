@@ -1,0 +1,16 @@
+name: Triggers
+
+on:
+  push:
+    branches: [main]
+    path: [src/]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  trigger:
+    runs-on: ubuntu-latest
+    steps:
+    - name: trigger
+      uses: actions/checkout@v4
+      run: ls -la

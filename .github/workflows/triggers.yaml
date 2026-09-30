@@ -20,7 +20,7 @@ on:
         description: custom
         required: false
         default: hello World
-        tyep: string
+        type: string
 
 jobs:
   trigger:

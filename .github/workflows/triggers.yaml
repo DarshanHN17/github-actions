@@ -3,7 +3,7 @@ name: Triggers
 on:
   push:
     branches: [main]
-    path: ['src/**']
+    paths: ['src/**']
   pull_request:
   workflow_dispatch:
     inputs:

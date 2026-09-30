@@ -13,5 +13,5 @@ jobs:
           echo "Event : ${{ github.event_name}}"
           echo "Branch : ${{ github.ref_name }}"
           echo "Actor : ${{ github.actor }}"
-          echo "Date : ${{ date }}"
+          echo "Date : $(date)"
 

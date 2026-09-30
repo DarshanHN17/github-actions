@@ -28,7 +28,10 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
-    - name: list files
+    - name: Debugging
       run: |
-        echo "Current Directory: $(pwd)"
+        echo "The current path is: $(pwd)"
+        echo "The content of the current directory is:"
         ls -la
+        echo "The content of the workspace directory is:"
+        ls -la $GITHUB_WORKSPACE

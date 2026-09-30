@@ -3,14 +3,30 @@ name: Triggers
 on:
   push:
     branches: [main]
-    path: [src/]
+    path: ['src/**']
   pull_request:
   workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Env'
+        required: true
+        default: 'dev'
+        type: choice
+        options:
+        - dev
+        - Stage
+        - prod
+      message:
+        description: custom
+        required: false
+        default: hello World
+        tyep: string
 
 jobs:
   trigger:
     runs-on: ubuntu-latest
     steps:
-    - name: trigger
+    - name: Checkout code
       uses: actions/checkout@v4
+    - name: list files
       run: ls -la

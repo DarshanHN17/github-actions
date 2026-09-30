@@ -7,17 +7,11 @@ on:
 jobs:
   testing:
     runs-on: ubuntu-latest
-    uses: actions/checkout@v4
     steps:
-      - name: event
-        run: ps aux
-
-      - name: branch
-        run: git branch
-
-      - name: time
-        run: date
-
-      - name: code
-        run: python3 app.py
+      - name: 1st test
+        run: |
+          echo "Event : ${{ github.event_name}}"
+          echo "Branch : ${{ github.ref_name }}"
+          echo "Actor : ${{ github.actor }}"
+          echo "Date : ${{ date }}"
 

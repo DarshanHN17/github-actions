@@ -1,19 +1,22 @@
 name: Initial Job
 
 on:
-  - push
-  - workflow_dispatch
+  push:
+  workflow_dispatch:
 
 jobs:
-
   testing:
-    runs_on: ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
-      -name: event
-       run: ps aux
-      -name: branch
-       run: git branch
-      -name: time
-       run: date
-      -name: code
-       run: python3 app.py
+      - name: event
+        run: ps aux
+
+      - name: branch
+        run: git branch
+
+      - name: time
+        run: date
+
+      - name: code
+        run: python3 app.py
+

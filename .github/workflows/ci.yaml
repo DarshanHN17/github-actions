@@ -37,5 +37,5 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: python-build-${{ github.run_number }}
-        paths: build/
+        path: build/
         retention-days: 7

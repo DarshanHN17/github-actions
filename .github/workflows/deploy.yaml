@@ -14,7 +14,19 @@ concurrency:
   group: 'pages'
   cancel-in-progress: false
 
+
+
 jobs:
+  Check:
+    name: ENV check
+    environment:
+      name: production
+    steps:
+    - name: Show name
+      env:
+        MY_name: ${{secrets.name}}
+      run: echo " Name is  $MY_name"
+
   Build:
     name: Building Files
     runs-on: ubuntu-latest

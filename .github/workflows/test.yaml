@@ -6,9 +6,9 @@ on:
       environment:
         required: true
         type: string
-      secrets:
-        MY_NAME:
-          required: true
+    secrets:
+      MY_NAME:
+        required: true
 
 jobs:
   Build:  

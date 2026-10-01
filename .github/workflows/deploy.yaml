@@ -25,7 +25,7 @@ jobs:
     steps:
     - name: Show name
       env:
-        MY_name: ${{secrets.name}}
+        MY_name: ${{secrets.MY_NAME}}
       run: echo " Name is  $MY_name"
 
   Build:

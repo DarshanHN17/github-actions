@@ -24,5 +24,4 @@ jobs:
     
     - name: Run tests
       run: |
-        apt install python3-pip -y
         pytest -vv

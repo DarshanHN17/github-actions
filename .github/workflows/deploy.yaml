@@ -19,6 +19,7 @@ concurrency:
 jobs:
   Check:
     name: ENV check
+    runs-on: ubuntu-latest
     environment:
       name: production
     steps:

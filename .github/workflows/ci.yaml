@@ -25,3 +25,5 @@ jobs:
     - name: Run tests
       run: |
         pytest -vv
+    - name: Build
+      run: python app.py

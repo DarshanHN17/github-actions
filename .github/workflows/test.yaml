@@ -1,0 +1,23 @@
+name: Testing Yaml
+
+on:
+  workflow_call:
+    inputs:
+      environment:
+        required: true
+        type: string
+      secrets:
+        MY_NAME:
+          required: true
+
+jobs:
+  Build:  
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v4
+    - name: Show input
+      run: echo "Env is ${{inputs.environment}}"
+    - name: Show secret
+      env:
+        NAME: ${{secrets.MY_NAME}}

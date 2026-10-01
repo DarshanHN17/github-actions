@@ -1,0 +1,14 @@
+name: Reusable
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  Test:
+    uses: .github/workflows/test.yaml
+    with:
+      environment: 'staging'
+    secrets:
+      MY_NAME: "Darshan"

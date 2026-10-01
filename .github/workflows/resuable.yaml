@@ -11,4 +11,4 @@ jobs:
     with:
       environment: 'staging'
     secrets:
-      MY_NAME: "Darshan"
+      MY_NAME: ${{secrets.NAME}}

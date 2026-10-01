@@ -21,3 +21,4 @@ jobs:
     - name: Show secret
       env:
         NAME: ${{secrets.MY_NAME}}
+      run: echo "$NAME"

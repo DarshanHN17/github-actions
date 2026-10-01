@@ -7,7 +7,7 @@ on:
 
 jobs:
   Test:
-    uses: .github/workflows/test.yaml
+    uses: ./.github/workflows/test.yaml
     with:
       environment: 'staging'
     secrets:

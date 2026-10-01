@@ -1,0 +1,39 @@
+name: GitHub Page Deployment
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-tocken: write
+
+concurrency:
+  group: 'pages'
+  cancel-in-progess: false
+
+jobs:
+  Build:
+    name: Building Files
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v4
+    - name: Setup Pages
+      uses: actions/configure-pages@v4
+    - name: Upload data
+      uses: actions/upload-pages-artifact@v3
+      with:
+        path: docs/
+  Deploy:
+    name: Deployment
+    needs: [Build]
+    environment:
+      name: github-pages
+      url: ${{steps.deployment.outputs.page_url}}
+    steps:
+    - name: Deploy to github-pages
+      id: deployment
+      uses: actions/deploy-pages@v4

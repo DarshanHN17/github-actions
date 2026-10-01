@@ -1,0 +1,71 @@
+<!-- docs/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Actions Lab</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        h1 {
+            color: #2ea44f;
+        }
+        .badge {
+            background-color: #2ea44f;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+        .card {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 10px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <h1>🚀 GitHub Actions Lab</h1>
+    <p><span class="badge">Deployed via GitHub Actions</span></p>
+
+    <div class="card">
+        <h2>✅ CI/CD Pipeline</h2>
+        <p>This site is automatically deployed using GitHub Actions</p>
+    </div>
+
+    <div class="card">
+        <h2>📦 Tasks Completed</h2>
+        <ul>
+            <li>✅ Task 1 - Hello World Workflow</li>
+            <li>✅ Task 2 - Environment Variables</li>
+            <li>✅ Task 3 - Artifacts</li>
+            <li>✅ Task 4 - CI Pipeline</li>
+            <li>✅ Task 5 - Deploy to GitHub Pages</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>🔧 Built With</h2>
+        <ul>
+            <li>Python 3.12</li>
+            <li>pytest</li>
+            <li>flake8</li>
+            <li>GitHub Actions</li>
+        </ul>
+    </div>
+
+    <footer>
+        <p>Deployed at: <span id="date"></span></p>
+        <script>
+            document.getElementById('date').innerHTML = new Date().toLocaleString();
+        </script>
+    </footer>
+</body>
+</html>

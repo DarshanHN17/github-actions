@@ -64,8 +64,8 @@ jobs:
       - name: Build
         run: |
           mkdir build
-          cp app.py /build
-          cp requirements.txt /build
+          cp app.py build/
+          cp requirements.txt build/
           ls -la build/
 
       - name: Uploading artifacts

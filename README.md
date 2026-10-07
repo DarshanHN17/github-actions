@@ -1,4 +1,18 @@
-## CI/CD Status
+# My GitHub Actions Lab 🚀
 
-![Complete Pipeline](https://github.com/DarshanHN17/github-actions/actions/workflows/complete.yml/badge.svg)
-# github-actions
+A project to master **GitHub Actions**.
+
+## What I Learned
+- [x] Workflows & Jobs
+- [x] Caching
+- [ ] Reusable Workflows
+
+## Example Workflow
+```yaml
+name: CI
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
